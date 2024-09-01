@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WeatherGuysDashboard</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" src="weather-guys-dashboard\public\cooltext465211951217357.ico">
+  <style>
+    body {
+
+  background-image: linear-gradient(lightskyblue, lime);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 325px 325px 325px 325px;
+  gap: 5px;
+  background-color: #2196F3;
+  padding: 6px;
+  color: white;
+  font-family: ebrima;
+  margin: 60px;
+   box-shadow: 0 9px 10px 0 rgba(0, 0, 0, 0.2), 0 9px 20px 0 rgba(33, 23, 77, 0.19);
+
+
+}
+
+.grid-container > div {
+  background-color: rgba(8, 0, 29, 0.92);
+  border: 1px solid black;
+  text-align: center;
+  font-size: 20px;
+}
+p.generalWeatherTable {
+  font-size: 11px;
+  white-space: pre-line;
+  margin: 3px;
+}
+.mapSectionContainer{
+  color: white;
+  font-family: ebrima;
+  text-align: center;
+  font-size: 20px;
+  background-color: red;
+}
+p.secondFonts {
+  font-size: 11px;
+  white-space: pre-line;
+  margin: 3px;
+  text-align: left;
+}
+
+  </style>
+</head>
+<body>
+  <app-root></app-root>
+
+
+  <div class="grid-container">
+    <div>General Weather:
+      <p class="generalWeatherTable">Your Local NWS Alerts Map: Click map then your area.
+  </p><img border="0" height="186" src="http://forecast.weather.gov/wwamap/png/US.png" style="border: 1px solid #FF0000" width="300"><span><p class="generalWeatherTable"> <a href="https://www.weather.gov/help-map"> NWS Colors Key /</a> <a href="https://kamala.cod.edu/svr/"> Current Warnings /</a> <a href="https://weatherology.com/maps-radar/alerts.html"> Interactive</a></br>             Current Tornado and Severe Thunderstorm Watches:</p></span>
+      <img border="0" height="408" src="http://www.spc.noaa.gov/products/watch/validww.png" style="border: 1px solid #FF0000; height: 210px; width: 300px;" width="582">
+    <p class="generalWeatherTable"><a href="http://www.spc.noaa.gov/new/images/Outlook-category-descriptions.png"> SPC Colors Key</a> / <a href="https://twitter.com/nadocast">Nadocast</a>
+      Today's SPC Storm Outlook:
+    </p>
+    <img border="0" src="https://www.spc.noaa.gov/partners/outlooks/state/swody1.png" style="border: 1px solid #FF0000; height: 210px; width: 300px;">
+    <p class="generalWeatherTable"> <a href="http://www.spc.noaa.gov/">Storms Prediction Center</a></p>
+    <p class="generalWeatherTable">SPC Color Descriptions: </p></b>
+    <img src="http://www.spc.noaa.gov/new/images/Outlook-category-descriptions.png" style="border: 1px solid #FF0000; width: 300px; height: 210px;">
+    <p class="generalWeatherTable">Tomorrow's Storm Outlook:</p>
+    <img src="https://www.spc.noaa.gov/products/outlook/day2otlk.gif" style="border: 1px solid #FF0000; width: 300px; height: 210px;">
+    <p class="generalWeatherTable">Day Two Strom Prediction:</p>
+    <img src="https://www.spc.noaa.gov/products/outlook/day3otlk.gif" style="border: 1px solid #FF0000; width: 300px; height: 210px;">
+    <p class="generalWeatherTable">Day Four-Eight Storm Outlook</p>
+    <img src="http://www.spc.noaa.gov/products/exper/day4-8/day48prob.gif" style="border: 1px solid #FF0000; width: 300px; height: 210px;" class="style9">
+    <p class="generalWeatherTable"> <a href="https://www.wpc.ncep.noaa.gov/threats/threats.php">US Hazards Outlook Page</a> / <a href="https://www.cpc.ncep.noaa.gov/products/predictions/threats/threats.php">Eight-Fourteen Day Outlook</a>
+      Day Three-Seven Hazard Outlook:</p>
+    <img border="3" src="https://origin.wpc.ncep.noaa.gov/threats/final/hazards_d3_7_contours.png" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; width: 300px;">
+    </div>
+    <div>Tropical Weather:
+      <p class="generalWeatherTable">National Hurricane Centers Five-Day Forecast:
+      <img border="3" src="https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; width: 300px; height: 200px;">
+        <a href="http://www.wunderground.com/hurricane/">Worldwide</a> / <a href="http://www.nhc.noaa.gov/gtwo.php?basin=epac&fdays=2">East Pacific</a> / <a href="https://www.nhc.noaa.gov/gtwo.php?basin=cpac&fdays=2">Central Pacific</a> / <a href="https://www.cyclocane.com/tropical-storm-risk/">Indian Ocean</a>
+      </p> <p class="generalWeatherTable">
+      Offical Two-Day Tropical Outlook:
+      </p>
+      <img border="3" src="http://www.nhc.noaa.gov/xgtwo/two_atl_2d0.png" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; height: 200px; width: 300px;">
+      <p class="generalWeatherTable"> <a href="https://coast.noaa.gov/floodexposure/#-8281882,3642082,5z">Surge Potential</a>
+      </p>
+        <p class="generalWeatherTable">Forecast Wave Height:
+      </p>
+        <img border="0" src="https://www.myfoxhurricane.com/custom/models/ww3/ww3_sigwave_atl.gif" style="border: 1px solid #FF0000; width: 300px;">
+      <p class="generalWeatherTable">Current Wave Heights:</p>
+      <img border="0" src="https://www.oceanweather.com/data/NATL-Southern/WAVE000.GIF" style="border: 1px solid #FF0000; width: 300px;">
+      <p class="generalWeatherTable">Gulf Wave Heights</p>
+      <img border="0" src="https://www.oceanweather.com/data/Gulf-of-Mexico/WAVE000.GIF" style="border: 1px solid #FF0000; width: 300px;">
+      </br>
+  <img border="0" src="http://www.ospo.noaa.gov/data/sst/contour/usatlant.fc.gif" style="width: 300px; border: 1px solid #FF0000">
+  </br>
+  <img border="0" src="http://www.ospo.noaa.gov/data/ocean/ohc/images/ohc_naQG3_ddc.gif" style="border: 1px solid #FF0000; width: 300px;">
+  </br>
+  <img border="0" src="https://www.tropicaltidbits.com/analysis/ocean/cdas-sflux_ssta_watl_1.png" style="border: 1px solid #FF0000; width: 300px;">
+  <p class="generalWeatherTable">Sea Surface 7-Day Temp Change:</p>
+    <img border="0" src="https://www.tropicaltidbits.com/analysis/ocean/cdas-sflux_ssta7diff_watl_1.png" style="border: 1px solid #FF0000; width: 300px;">
+      </div>
+    <div>General Weather:
+      <p class="generalWeatherTable">Current Jet Stream</p>
+     <img border="0" src="https://s.w-x.co/staticmaps/wu/wu/jetstream1200_cur/conus/thumbnail.png" style="height: 200px; width: 300px; border: 1px solid #FF0000">
+      </br>
+  <p class="generalWeatherTable">Next Three Day Forecast:</p>
+  <img alt="" class="style6" src="http://origin.wpc.ncep.noaa.gov/basicwx/allfcsts_loop_ndfd.gif" style="border: 1px solid #FF0000; width: 300px; ">
+  </br>
+  <img border="1" src="http://www.wpc.ncep.noaa.gov/qpf/fill_94qwbg.gif" style="border: 1px solid #FF0000; height: 112px; width: 150px;">
+  <img border="1" src="http://www.wpc.ncep.noaa.gov/qpf/p120i.gif" style="border: 1px solid #FF0000; height: 112px; width: 148px;">
+  </br>
+  <img border="3" src="https://www.wpc.ncep.noaa.gov/qpf/94ewbg.gif" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; text-align: center; width: 149px;" height="100">
+  <img border="3" src="https://www.wpc.ncep.noaa.gov/qpf/98ewbg.gif" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; text-align: center; height: 100px; width: 149px;">
+  </br>
+  <img border="3" src="https://www.wpc.ncep.noaa.gov/qpf/99ewbg.gif" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; text-align: center; width: 149px;">
+  <img border="3" src="https://www.wpc.ncep.noaa.gov/qpf/ero_d45/images/d4wbg.gif" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; text-align: center; width: 149px;">
+  <img border="3" src="https://s.w-x.co/staticmaps/wu/pbs/preday/usa/thumbnail.png" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; height: 110px; width: 148px;">
+
+  <img border="3" src="https://s.w-x.co/staticmaps/wu/pbs/preweek/usa/thumbnail.png" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; width: 150px; height: 110px;">
+
+  <p class="generalWeatherTable">Day Three to Seven Day Forecasts (Printed)</p>
+  <img border="1" height="216" src="http://www.wpc.ncep.noaa.gov/medr/5dayfcst_wbg_conus.gif" style="border: 1px solid #FF0000; width: 300px;" width="1024">
+
+  <img _ngcontent-app-root-c143="" alt="Static map" usemap="#clickableMap" src="https://s.w-x.co/staticmaps/wu/wxtype/none/usa/animate.png" style="border: 1px solid #FF0000; width: 300px;">
+
+  <img _ngcontent-app-root-c143="" alt="Static map" usemap="#clickableMap" src="https://s.w-x.co/staticmaps/wu/wxtype/county_loc/clt/animate.png" style="border: 1px solid #FF0000; width: 300px;">
+
+  </br>
+  <div class="mapSectionContainer">Weather Tips and Information</div>
+  <p class="generalWeatherTable">Areas of tropical development per month and their tracks.</p>
+       <a href="https://www.nhc.noaa.gov/climo/images/2021climo/atl_climo_ns_jun.jpg">
+    <img border="3" src="https://www.nhc.noaa.gov/climo/images/2021climo/atl_climo_ns_jun_sm.jpg" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; width: 149px;"></a>
+  <a href="https://www.nhc.noaa.gov/climo/images/2021climo/atl_climo_ns_jul.jpg"><img border="3" src="https://www.nhc.noaa.gov/climo/images/2021climo/atl_climo_ns_jul_sm.jpg" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; width: 149px;"></a>
+  <a href="https://www.nhc.noaa.gov/climo/images/2021climo/atl_climo_ns_aug.jpg">
+    <img border="3" src="https://www.nhc.noaa.gov/climo/images/2021climo/atl_climo_ns_aug_sm.jpg" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; width: 149px;"></a>
+  <a href="https://www.nhc.noaa.gov/climo/images/2021climo/atl_climo_ns_sep.jpg"><img border="3" src="https://www.nhc.noaa.gov/climo/images/2021climo/atl_climo_ns_sep_sm.jpg" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; width: 149px;"></a>
+  <a href="https://www.nhc.noaa.gov/climo/images/2021climo/atl_climo_ns_oct.jpg">
+    <img border="3" src="https://www.nhc.noaa.gov/climo/images/2021climo/atl_climo_ns_oct_sm.jpg" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; width: 149px;"></a>
+  <a href="https://www.nhc.noaa.gov/climo/images/2021climo/atl_climo_ns_nov.jpg"><img border="3" src="https://www.nhc.noaa.gov/climo/images/2021climo/atl_climo_ns_nov_sm.jpg" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; width: 149px;"></a>
+  <a href="https://www.nhc.noaa.gov/climo/images/2021climo/AtlanticCampfire_sm.png">
+    <img border="3" src="https://www.nhc.noaa.gov/climo/images/2021climo/AtlanticCampfire_sm.png" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; width: 310px;"></a>
+  <p class="secondFonts">Interested in past hurricane and tropical storm radar loops? <a href="http://bmcnoldy.rsmas.miami.edu/tropics/radar/">Click here for gif and mp4 loops</a>
+    <p class="secondFonts">Have a Family Disaster Plan and  <a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/make-a-plan.html">Disaster Supply Kit.</a> Build or identify a Safe-Room in your Home.
+      Purchase a <a href="http://www.nws.noaa.gov/nwr/">NOAA Weather Radio</a> with a tone alert feature, which allows you to receive warnings by your local NWS office. Inquire if your Community is StormReady. We here at The Weather Guys promote the National Weather Service campaign for <a href="https://www.weather.gov/StormReady">StormReady</a>. Click and find out more information.</p>
+      <a href="https://www.ncei.noaa.gov/pub/data/images/US_Hurricane_Strikes/Continental_US_Hurricane_Strikes_1950-2022_Poster.pdf">
+        Hurricane Strikes
+        <img border="3" src="images/HurricaneStrikes2022.gif" style="border: 1px solid #ff0000; font-size: 8pt; font-weight: 400; height: 255px; width: 330px;">
+      </a>
+
+      </div>
+    <div class="4">Satellite & Radar Products:
+      <img border="3" src="https://cdn.star.nesdis.noaa.gov/GOES16/ABI/SECTOR/taw/GEOCOLOR/GOES16-TAW-GEOCOLOR-900x540.gif" style="border: 1px solid #FF0000;height: 210px; width: 300px;">
+      </br>
+  <img border="3" src="https://radar.weather.gov/ridge/standard/SOUTHEAST_loop.gif" style="border: 1px solid #FF0000; width: 300px;">
+  <p class="generalWeatherTable">Current Aviation Weather:
+  </p>
+  <img border="0" src="https://aviationweather.gov/data/obs/sat/us/sat_visfog_us.png" style="height: 167px; width: 300px; border: 1px solid #FF0000">
+  <p class="generalWeatherTable">Airport Delays:</p>
+  <img border="0" src="https://tracker.flightview.com/FVDelay/DelayMap.asp?custId=FVPublicSite&amp;mapId=NAEntire670x390" style="width: 300px; border: 1px solid #FF0000" height="200">
+
+  <img _ngcontent-app-root-c143="" alt="Static map" usemap="#clickableMap" src="https://s.w-x.co/staticmaps/wu/wu/satir1200_cur/conus/animate.png" style="width: 300px; border: 1px solid #FF0000" height="200">
+
+
+      </div>
+
+    <div><a href="https://noaaweatherradio.org/" target="_blank">
+  <img border="0" src="https://assets.codepen.io/10811741/NOAAradio.jpg" alt="" style="border: 1px solid #FF0000" height="40" width="225"></a></div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+  </div>
+</body>
+</html>

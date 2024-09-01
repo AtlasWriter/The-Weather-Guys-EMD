@@ -1,0 +1,39 @@
+<h2>Storm Updates</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Storm Impact:</th>
+      <th>Storm Position:</th>
+      <th>Storm Update Date:</th>
+      <th>Storm Track:</th>
+      <th>Storm Name:</th>
+      <th>Storm Opinion Forecast: </th>
+      <th>Actions: </th>
+
+
+
+
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stormUpdate of stormUpdates">
+      <td>{{ stormUpdate.id }}</td>
+      <td>{{ stormUpdate.stormImpact }}</td>
+      <td>{{ stormUpdate.stormPosition }}</td>
+      <td>{{ stormUpdate.stormUpdateDate }}</td>
+      <td>{{ stormUpdate.stormTrack }}</td>
+      <td>{{ stormUpdate.stromName }}</td>
+      <td>{{ stormUpdate.stormOpnionForecast }}</td>
+      <td>
+        <a class="btn btn-primary" [routerLink]="['/storm-updates/edit', stormUpdate.id]">Edit</a>
+        <button class="btn btn-danger" (click)="deleteStormUpdate(stormUpdate.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<a class="btn btn-success" [routerLink]="'/storm-updates/new'">Add New Storm Update</a>

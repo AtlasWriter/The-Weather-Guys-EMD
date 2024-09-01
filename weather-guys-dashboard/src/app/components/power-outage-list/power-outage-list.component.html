@@ -1,0 +1,25 @@
+<h2>Power Outages</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Affecting</th>
+      <th>Greenville</th>
+      <th>Spartanburg</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let powerOutage of powerOutages">
+      <td>{{ powerOutage.location }}</td>
+      <td>{{ powerOutage.affecting }}</td>
+      <td>{{ powerOutage.isGreenville }}</td>
+      <td>{{ powerOutage.isSpartanburg }}</td>
+      <td>
+        <a class="btn btn-primary" [routerLink]="['/power-outages/edit', powerOutage.id]">Edit</a>
+        <button class="btn btn-danger" (click)="deletePowerOutage(powerOutage.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a class="btn btn-success" routerLink="/power-outages/new">Add New Power Outage</a>

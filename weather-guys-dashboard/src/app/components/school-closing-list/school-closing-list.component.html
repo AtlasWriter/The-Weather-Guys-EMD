@@ -1,0 +1,25 @@
+<h2>School Closings</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Greenville</th>
+      <th>Spartanburg</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let schoolClosing of schoolClosings">
+      <td>{{ schoolClosing.name }}</td>
+      <td>{{ schoolClosing.status }}</td>
+      <td>{{ schoolClosing.isGreenville }}</td>
+      <td>{{ schoolClosing.isSpartanburg }}</td>
+      <td>
+        <a class="btn btn-primary" [routerLink]="['/school-closings/edit', schoolClosing.id]">Edit</a>
+        <button class="btn btn-danger" (click)="deleteSchoolClosing(schoolClosing.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a class="btn btn-success" routerLink="/school-closings/new">Add New School Closing</a>
