@@ -1,0 +1,79 @@
+<h2>{{ editMode ? 'Edit' : 'New' }} Storm Update</h2>
+
+<form (ngSubmit)="saveStormUpdate()">
+  <div class="form-group">
+    <label for="stormName">Storm Name</label>
+    <input
+      type="text"
+      id="stormName"
+      [(ngModel)]="stormUpdate.stromName"
+      name="stormName"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="stormPosition">Storm Position</label>
+    <input
+      type="text"
+      id="stormPosition"
+      [(ngModel)]="stormUpdate.stormPosition"
+      name="stormPosition"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="stormTrack">Storm Track</label>
+    <input
+      type="text"
+      id="stormTrack"
+      [(ngModel)]="stormUpdate.stormTrack"
+      name="stormTrack"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="stormImpact">Storm Impact</label>
+    <input
+      type="text"
+      id="stormImpact"
+      [(ngModel)]="stormUpdate.stormImpact"
+      name="stormImpact"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="stormOpinionForecast">Storm Opinion Forecast</label>
+    <textarea
+      id="stormOpinionForecast"
+      [(ngModel)]="stormUpdate.stormOpnionForecast"
+      name="stormOpinionForecast"
+      class="form-control"
+      rows="3"
+      required
+    ></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="stormUpdateDate">Storm Update Date</label>
+    <input
+      type="date"
+      id="stormUpdateDate"
+      [(ngModel)]="stormUpdate.stormUpdateDate"
+      name="stormUpdateDate"
+      class="form-control"
+      required
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary">
+    {{ editMode ? 'Update' : 'Create' }} Storm Update
+  </button>
+</form>

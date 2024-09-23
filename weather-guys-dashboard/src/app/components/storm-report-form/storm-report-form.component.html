@@ -1,0 +1,78 @@
+<p>Works</p>
+<h2>{{ editMode ? 'Edit' : 'New' }} Storm Report</h2>
+
+<form (ngSubmit)="saveStormReport()">
+  <div class="form-group">
+    <label for="event">Event</label>
+    <input
+      type="text"
+      id="event"
+      class="form-control"
+      [(ngModel)]="stormReport.event"
+      name="event"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea
+      id="description"
+      class="form-control"
+      [(ngModel)]="stormReport.description"
+      name="description"
+      required
+    ></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="date">Date</label>
+    <input
+      type="text"
+      id="date"
+      class="form-control"
+      [(ngModel)]="stormReport.date"
+      name="date"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="street">Street</label>
+    <input
+      type="text"
+      id="street"
+      class="form-control"
+      [(ngModel)]="stormReport.street"
+      name="street"
+      required
+    />
+  </div>
+
+  <div class="form-group form-check">
+    <input
+      type="checkbox"
+      id="isGreenville"
+      class="form-check-input"
+      [(ngModel)]="stormReport.isGreenville"
+      name="isGreenville"
+    />
+    <label class="form-check-label" for="isGreenville">Greenville</label>
+  </div>
+
+  <div class="form-group form-check">
+    <input
+      type="checkbox"
+      id="isSpartanburg"
+      class="form-check-input"
+      [(ngModel)]="stormReport.isSpartanburg"
+      name="isSpartanburg"
+    />
+    <label class="form-check-label" for="isSpartanburg">Spartanburg</label>
+  </div>
+
+  <button type="submit" class="btn btn-success">
+    {{ editMode ? 'Update' : 'Create' }} Storm Report
+  </button>
+  <a [routerLink]="['/storm-reports']" class="btn btn-secondary ml-2">Cancel</a>
+</form>

@@ -1,0 +1,27 @@
+<h2>Shelters</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Greenville</th>
+      <th>Spartanburg</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let shelter of shelters">
+      <td>{{ shelter.name }}</td>
+      <td>{{ shelter.address }}</td>
+      <td>{{ shelter.phone }}</td>
+      <td>{{ shelter.isGreenville }}</td>
+      <td>{{ shelter.isSpartanburg }}</td>
+      <td>
+        <a class="btn btn-primary" [routerLink]="['/shelters/edit', shelter.id]">Edit</a>
+        <button class="btn btn-danger" (click)="deleteShelter(shelter.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a class="btn btn-success" routerLink="/shelters/new">Add New Shelter</a>

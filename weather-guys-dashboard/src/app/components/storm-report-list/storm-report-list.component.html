@@ -1,0 +1,29 @@
+<h2>Storm Reports</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Location</th>
+      <th>Actions</th>
+      <th>Actions</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stormReport of stormReports">
+      <td>{{ stormReport.id }}</td>
+      <td>{{ stormReport.event }}</td>
+      <td>{{ stormReport.description }}</td>
+      <td>{{ stormReport.date }}</td>
+      <td>{{ stormReport.street }}</td>
+      <td>{{ stormReport.isGreenville }}</td>
+      <td>
+        <a class="btn btn-primary" [routerLink]="['/storm-reports/edit', stormReport.id]">Edit</a>
+        <button class="btn btn-danger" (click)="deleteStormReport(stormReport.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a class="btn btn-success" routerLink="/storm-reports/new">Add New Storm Report</a>
