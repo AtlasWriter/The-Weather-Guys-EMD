@@ -7,7 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:weather-guys-dashboard": "node dist/weather-guys-dashboard/server/server.mjs"
+    "serve:ssr:weather-guys-dashboard": "node dist/weather-guys-dashboard/server/server.mjs",
+    "server": "ts-node path/to/server.ts",
+    "dev": "nodemon src/server.ts"
   },
   "private": true,
   "dependencies": {
@@ -22,8 +24,10 @@
     "@angular/router": "^18.2.0",
     "@angular/ssr": "^18.2.1",
     "@popperjs/core": "^2.11.8",
+    "body-parser": "^1.20.3",
     "bootstrap": "^5.3.3",
-    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "weather-guys-dashboard": "file:",
@@ -42,6 +46,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "ts-node": "^10.9.2",
     "typescript": "~5.5.2"
   }
 }

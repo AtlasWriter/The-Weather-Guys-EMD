@@ -1,7 +1,13 @@
 import { createPool, Pool } from 'mysql';
+
 let pool: Pool | null = null;
 
 const initializeMySqlConnector = () => {
+  if (pool) {
+    console.log("Database pool already initialized.");
+    return;
+  }
+
   try {
     pool = createPool({
       connectionLimit: parseInt(process.env.MY_SQL_DB_CONNECTION_LIMIT || "10", 10),
@@ -12,41 +18,46 @@ const initializeMySqlConnector = () => {
       database: process.env.MY_SQL_DB_DATABASE,
     });
 
-    console.debug('MySQL Adapter Pool generated successfully');
-    console.log('Connected to database:', process.env.MY_SQL_DB_DATABASE);
+    console.debug("MySQL Adapter Pool generated successfully");
+    console.log("Connected to database:", process.env.MY_SQL_DB_DATABASE);
 
     pool.getConnection((err, connection) => {
       if (err) {
-        console.error('Error: MySQL failed to connect', err);
-        throw new Error('Unable to connect to the database');
+        console.error("Error: MySQL failed to connect", err);
+        throw new Error("Unable to connect to the database");
       } else {
-        console.log('Connection established');
+        console.log("Connection established");
         connection.release();
       }
     });
   } catch (error) {
-    console.error('[MySQL Connector] Initialization Error:', error);
-    throw new Error('Failed to initialize connection pool');
+    console.error("[MySQL Connector] Initialization Error:", error);
+    throw new Error("Failed to initialize connection pool");
   }
 };
 
-export { initializeMySqlConnector };
+// Ensure the pool is always initialized before any query execution
+const getPool = () => {
+  if (!pool) {
+    console.log("Database pool was not initialized. Initializing now...");
+    initializeMySqlConnector();
+  }
+  return pool!;
+};
+
+// Execute function remains unchanged
 export const execute = <T>(query: string, params: string[] | Object): Promise<T> => {
-  try {
-    if (!pool) {
-      initializeMySqlConnector();
-    }
+  return new Promise<T>((resolve, reject) => {
+    const connectionPool = getPool(); // Ensure pool is initialized
 
-    return new Promise<T>((resolve, reject) => {
-      pool!.query(query, params, (error, results) => {
-        if (error) {
-          return reject(error);
-        }
-        resolve(results);
-      });
+    connectionPool.query(query, params, (error, results) => {
+      if (error) {
+        console.error("[mysql.connector][execute][Error]:", error);
+        return reject(error);
+      }
+      resolve(results);
     });
-  } catch (error) {
-    console.error('[mysql.connector][execute][Error]:', error);
-    throw new Error('Failed to execute MySQL query');
-  }
+  });
 };
+
+export { initializeMySqlConnector, getPool };

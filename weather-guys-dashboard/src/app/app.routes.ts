@@ -10,9 +10,14 @@ import { PowerOutageListComponent } from './components/power-outage-list/power-o
 import { PowerOutageFormComponent } from './components/power-outage-form/power-outage-form.component';
 import { ShelterListComponent } from './components/shelter-list/shelter-list.component';
 import { ShelterFormComponent } from './components/shelter-form/shelter-form.component';
-import { FormsModule } from '@angular/forms'; // Import this line
+import { FormsModule } from '@angular/forms';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { WesternCarolinaMapComponent } from './components/western-carolina-map/western-carolina-map.component';
+
+
 
 
 
@@ -33,6 +38,9 @@ export const routes: Routes = [
   { path: 'shelters', component: ShelterListComponent },
   { path: 'shelters/new', component: ShelterFormComponent },
   { path: 'shelters/edit/:id', component: ShelterFormComponent },
+  { path: 'search-results', component: SearchResultsComponent },
+  { path: 'western-carolina-map', component: WesternCarolinaMapComponent },
+
 ];
 
 @NgModule({
@@ -45,6 +53,8 @@ export const routes: Routes = [
     SchoolClosingListComponent,
     PowerOutageListComponent,
     ShelterListComponent,
+    SearchResultsComponent,
+    WesternCarolinaMapComponent
 
     // Add other components as needed
   ],
@@ -53,7 +63,7 @@ export const routes: Routes = [
     provideHttpClient(withInterceptorsFromDi())  // Add the new HttpClient provider with interceptors if needed
   ],
 
-  imports: [FormsModule, CommonModule, RouterModule.forRoot(routes)],
+  imports: [FormsModule, CommonModule, BrowserModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

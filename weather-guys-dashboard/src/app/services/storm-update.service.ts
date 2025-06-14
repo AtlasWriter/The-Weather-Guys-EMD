@@ -20,8 +20,9 @@ export class StormUpdateService {
   }
 
   createStormUpdate(stormUpdate: stormUpdate): Observable<stormUpdate> {
-    return this.http.post<stormUpdate>(this.apiUrl, stormUpdate);
+    return this.http.post<stormUpdate>(`${this.apiUrl}/addNewStormUpdate`, stormUpdate);
   }
+
 
   updateStormUpdate(id: number, stormUpdate: stormUpdate): Observable<stormUpdate> {
     return this.http.put<stormUpdate>(`${this.apiUrl}/${id}`, stormUpdate);

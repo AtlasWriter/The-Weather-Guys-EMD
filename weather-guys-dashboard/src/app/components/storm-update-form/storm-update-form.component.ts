@@ -10,13 +10,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class StormUpdateFormComponent implements OnInit {
   stormUpdate: stormUpdate = {
-    id: 0,
     stromName: '',
     stormPosition: '',
     stormTrack: '',
     stormImpact: '',
     stormOpnionForecast: '',
-    stormUpdateDate: ''
+    stormUpdateDate: '',
+    id: 0
   };
   editMode = false;
 
@@ -36,15 +36,24 @@ export class StormUpdateFormComponent implements OnInit {
     }
   }
 
+
   saveStormUpdate(): void {
+    console.log('Submitting storm update:', this.stormUpdate); // Add this line
     if (this.editMode) {
       this.stormUpdateService
         .updateStormUpdate(this.stormUpdate.id!, this.stormUpdate)
-        .subscribe(() => this.router.navigate(['/storm-updates']));
+        .subscribe(() =>
+          console.log('Update successful')); // Add this line
+          this.router.navigate(['/storm-updates']);
+
     } else {
       this.stormUpdateService
         .createStormUpdate(this.stormUpdate)
-        .subscribe(() => this.router.navigate(['/storm-updates']));
+        .subscribe(() =>
+          console.log('Creation successful')); // Add this line
+          this.router.navigate(['/storm-updates']);
+
     }
   }
+
 }
