@@ -22,6 +22,35 @@ Fetching Real-Time Weather Updates (Backend - Node.js):
 
 <img width="742" height="286" alt="image" src="https://github.com/user-attachments/assets/f44e9b59-b4b2-4201-8d2c-d5076388d65a" />
 
+<img width="975" height="716" alt="image" src="https://github.com/user-attachments/assets/6798eb73-2662-4b29-b7e9-1ccfee044219" />
+
+# ER Diagram
+<img width="975" height="639" alt="image" src="https://github.com/user-attachments/assets/c32cf381-d774-4de3-bb1c-114da4275f0b" />
+
+# Working Product:
+
+<img width="985" height="593" alt="image" src="https://github.com/user-attachments/assets/7b4ded59-ef39-403e-8db3-0f1af36cab8a" />
+
+<img width="975" height="472" alt="image" src="https://github.com/user-attachments/assets/c6f9d125-e84d-48d2-9688-1b5abda4c26c" />
+
+# Sprint Log
+<img width="975" height="510" alt="image" src="https://github.com/user-attachments/assets/e4b4109f-0b63-466e-a78f-c969cdb835eb" />
+
+More Details:
+The Weather Guys EMD is a web-based application developed using Angular (frontend) and Node.js/Express (backend) with MySQL as the database. The system integrates various services to process, store, and visualize real-time weather data.
+Solution Architecture
+Below is the high-level system architecture:
+Frontend (Angular)
+•	User interface for real-time storm updates, maps, and alerts.
+•	Interactive components for submitting storm reports and searching shelters.
+•	Uses Bootstrap for UI design and Leaflet.js for interactive mapping.
+Backend (Node.js + Express)
+•	RESTful APIs to fetch and update weather reports, storm data, and power outages.
+•	Handles user authentication and role-based access.
+•	Uses MySQL to store and manage storm reports, power outages, and historical data.
+Database (MySQL)
+•	Stores user-submitted reports, weather events, and emergency response actions.
+•	Optimized queries for fast retrieval and historical analysis
 
 ## Installation
 
