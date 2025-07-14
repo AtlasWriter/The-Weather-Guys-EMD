@@ -1,6 +1,6 @@
-# Foobar
+# The Weather Guys - Emergency Management Dashboard
 
-Foobar is a Python library for dealing with word pluralization.
+The Weather Guys: Emergency Management Dashboard is an innovative application designed to provide comprehensive, real-time information for managing and responding to weather-related emergencies. This dashboard will be a critical tool for emergency responders, local authorities, and the general public, offering a centralized platform to access vital data such as local storm reports, school closings, power outages, road closures, storm status/tracks, storm shelters, webcams, and weather maps. With a robust search integrated into the application making reports easy to find. 
 
 ## Installation
 
