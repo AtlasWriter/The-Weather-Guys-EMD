@@ -12,6 +12,9 @@ Reduced inefficiencies of scattered communication and response systems helps gov
 # UML Design
 <img width="975" height="541" alt="image" src="https://github.com/user-attachments/assets/858c00e1-8d0d-4a2a-8488-35a77b074a30" />
 
+# Flowchart
+<img width="962" height="590" alt="image" src="https://github.com/user-attachments/assets/fd63794f-01f9-461d-b917-3382bf9a094e" />
+
 
 ## Installation
 
