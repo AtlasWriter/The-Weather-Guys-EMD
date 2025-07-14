@@ -9,6 +9,10 @@ Data-driven emergency management presents even another possibility since past st
 
 Reduced inefficiencies of scattered communication and response systems helps governments and emergency management organizations save money. A well-integrated dashboard guarantees efficient allocation of resources and helps to minimize effort duplication. At last, the dashboard may be a teaching tool, raising public knowledge of severe storm readiness and supporting a resilient culture. Actionable knowledge and preparedness rules enable communities to more resist upcoming crises. By means of these advantages and possibilities, the Weather Guys EMD may transform emergency response operations, therefore saving lives and reducing the consequences of severe weather disasters.
 
+# UML Design
+<img width="975" height="541" alt="image" src="https://github.com/user-attachments/assets/858c00e1-8d0d-4a2a-8488-35a77b074a30" />
+
+
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
