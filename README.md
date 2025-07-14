@@ -15,6 +15,13 @@ Reduced inefficiencies of scattered communication and response systems helps gov
 # Flowchart
 <img width="962" height="590" alt="image" src="https://github.com/user-attachments/assets/fd63794f-01f9-461d-b917-3382bf9a094e" />
 
+# API Endpoints
+<img width="985" height="1010" alt="image" src="https://github.com/user-attachments/assets/bfd59413-c35e-4467-a9b5-4603e4798039" />
+
+Fetching Real-Time Weather Updates (Backend - Node.js):
+
+<img width="742" height="286" alt="image" src="https://github.com/user-attachments/assets/f44e9b59-b4b2-4201-8d2c-d5076388d65a" />
+
 
 ## Installation
 
