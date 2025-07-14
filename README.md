@@ -72,17 +72,24 @@ cd weather-guys-dashboard
 ## Usage
 
 ```python
-git clone https://github.com/your-username/weather-guys-dashboard.git
-cd weather-guys-dashboard
+weather-guys-dashboard/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   └── western-carolina-map/
+│   │   │       ├── western-carolina-map.component.ts
+│   │   │       ├── western-carolina-map.component.html
+│   │   │       └── western-carolina-map.component.css
+│   │   └── app.module.ts
+│   ├── assets/
+│   │   └── WesternCarolinaMapUp.geojson
+│   │   └── map image.png
+│   └── index.html
+├── .gitignore
+├── angular.json
+├── package.json
+└── README.md
 
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
 ```
 
 ## Contributing
