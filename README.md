@@ -65,7 +65,8 @@ Before installing, make sure you have the following installed:
 * A code editor like VS Code
 
 ```bash
-pip install foobar
+git clone https://github.com/your-username/weather-guys-dashboard.git
+cd weather-guys-dashboard
 ```
 
 ## Usage
