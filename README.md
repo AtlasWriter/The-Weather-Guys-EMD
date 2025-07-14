@@ -41,20 +41,28 @@ The Weather Guys EMD is a web-based application developed using Angular (fronten
 Solution Architecture
 Below is the high-level system architecture:
 Frontend (Angular)
-•	User interface for real-time storm updates, maps, and alerts.
-•	Interactive components for submitting storm reports and searching shelters.
-•	Uses Bootstrap for UI design and Leaflet.js for interactive mapping.
+* User interface for real-time storm updates, maps, and alerts.
+* Interactive components for submitting storm reports and searching shelters.
+* Uses Bootstrap for UI design and Leaflet.js for interactive mapping.
 Backend (Node.js + Express)
-•	RESTful APIs to fetch and update weather reports, storm data, and power outages.
-•	Handles user authentication and role-based access.
-•	Uses MySQL to store and manage storm reports, power outages, and historical data.
+* RESTful APIs to fetch and update weather reports, storm data, and power outages.
+* Handles user authentication and role-based access.
+* Uses MySQL to store and manage storm reports, power outages, and historical data.
 Database (MySQL)
-•	Stores user-submitted reports, weather events, and emergency response actions.
-•	Optimized queries for fast retrieval and historical analysis
+* Stores user-submitted reports, weather events, and emergency response actions.
+* Optimized queries for fast retrieval and historical analysis
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Before installing, make sure you have the following installed:
+
+* Node.js (version 18.x or higher recommended)
+
+* Angular CLI (version 15+)
+
+* Git (to clone the repository)
+
+* A code editor like VS Code
 
 ```bash
 pip install foobar
@@ -63,7 +71,8 @@ pip install foobar
 ## Usage
 
 ```python
-import foobar
+git clone https://github.com/your-username/weather-guys-dashboard.git
+cd weather-guys-dashboard
 
 # returns 'words'
 foobar.pluralize('word')
